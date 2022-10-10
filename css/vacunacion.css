@@ -1,0 +1,511 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Cambria;
+}
+
+div {
+    display: block;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x) * -.5);
+    margin-left: calc(var(--bs-gutter-x) * -.5);
+}
+
+.row::after {
+    width: 100%;
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+}
+
+[class*="col-"] {
+    width: 100%;
+}
+
+@media only screen and (min-width: 320px) {
+    .div-s-4 {
+        width: 100%;
+        display: block;
+        height: 100px;
+        position: relative;
+        top: 75%;
+        left: 2%;
+        margin-top: 20px;
+        background: #ffffff;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+        border-radius: 10px;
+        opacity: 90%;
+    }
+}
+
+@media only screen and (min-width: 320px) {
+    /* For tablets: */
+    .col-s-1 {
+        width: 8.33%;
+    }
+    .col-s-2 {
+        width: 16.66%;
+    }
+    .col-s-3 {
+        width: 25%;
+    }
+    .col-s-4 {
+        width: 33.33%;
+    }
+    .col-s-5 {
+        width: 41.66%;
+    }
+    .col-s-6 {
+        width: 50%;
+    }
+    .col-s-7 {
+        width: 58.33%;
+    }
+    .col-s-8 {
+        width: 66.66%;
+    }
+    .col-s-9 {
+        width: 75%;
+    }
+    .col-s-10 {
+        width: 83.33%;
+    }
+    .col-s-11 {
+        width: 91.66%;
+    }
+    .col-s-12 {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .div-4 {
+        width: 750px;
+        height: 100px;
+        position: absolute;
+        top: 75%;
+        left: 10%;
+        background: #ffffff;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+        border-radius: 10px;
+        opacity: 90%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {
+        flex: 0 0 auto;
+        width: 8.33333333%
+    }
+    .col-2 {
+        display: block;
+        flex: 0 0 auto;
+        width: 16.66666667%
+    }
+    .col-3 {
+        flex: 0 0 auto;
+        width: 25%
+    }
+    .col-4 {
+        flex: 0 0 auto;
+        width: 33.33333333%
+    }
+    .col-5 {
+        flex: 0 0 auto;
+        width: 41.66666667%
+    }
+    .col-6 {
+        flex: 0 0 auto;
+        width: 50%
+    }
+    .col-7 {
+        flex: 0 0 auto;
+        width: 58.33333333%
+    }
+    .col-8 {
+        flex: 0 0 auto;
+        width: 66.66666667%
+    }
+    .col-9 {
+        flex: 0 0 auto;
+        width: 75%
+    }
+    .col-10 {
+        flex: 0 0 auto;
+        width: 83.33333333%
+    }
+    .col-11 {
+        flex: 0 0 auto;
+        width: 91.66666667%
+    }
+    .col-12 {
+        flex: 0 0 auto;
+        width: 100%
+    }
+}
+
+body {
+    background: #ffffff;
+    width: 100%;
+}
+
+header {
+    background: rgba(255, 252, 252, 0.9);
+    width: 100%;
+    position: absolute;
+    z-index: 100;
+    opacity: 95%;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    list-style: none;
+    overflow: hidden;
+}
+
+nav ul li {
+    float: left;
+    font-size: 20px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 38px 50px 0px 0px;
+    color: #6d7b93;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.mb {
+    margin-bottom: 20px;
+}
+
+.brand {
+    float: left;
+    padding: 30px 7%;
+    color: #3454d2;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.brand2 {
+    color: #3454d2;
+    font-size: x-large;
+    font-weight: bold;
+    margin-top: 20%;
+}
+
+.bottons {
+    display: block;
+    float: right;
+    background: #3454d2;
+    color: white;
+    width: 150px;
+    height: 50px;
+    border: 0ch;
+    margin: 20px 50px 0px 0px;
+    border-radius: 10px;
+}
+
+.bottons2 {
+    display: block;
+    float: right;
+    background: #3454d2;
+    color: white;
+    width: 110px;
+    height: 50px;
+    border: 0ch;
+    margin: 20px 50px 0px 0px;
+    border-radius: 10px;
+}
+
+.bottons3 {
+    display: block;
+    background: #e9f1fe;
+    color: #3454d2;
+    width: 110px;
+    height: 50px;
+    border: 0ch;
+    margin: 15% 0% 15% 20%;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.bottons4 {
+    display: block;
+    background: #3454d2;
+    color: #eef0f5;
+    width: 110px;
+    height: 50px;
+    border: 0ch;
+    margin: 15% 0% 15% 20%;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+@media only screen and (min-width: 320px) {
+    .img-s-1 {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .img1 {
+        width: 100% !important;
+        height: 650px !important;
+        object-fit: cover;
+    }
+}
+
+.img2 {
+    width: 100% !important;
+    height: 30% !important;
+    object-fit: fill !important;
+}
+
+.div1 {
+    margin-left: 10%;
+}
+
+.div2 {
+    width: 25px;
+    height: 25px;
+    background: #fffaea;
+    border-radius: 10%;
+}
+
+.div3 {
+    margin-left: 10%;
+    margin-top: 10%;
+}
+
+.div4 {
+    width: 30px;
+    height: 30px;
+    background: #e9f1fe;
+    border-radius: 5px;
+    margin: 10px 0px 0px 5px;
+}
+
+.div5 {
+    width: 30px;
+    height: 30px;
+    background: #e9f1fe;
+    border-radius: 5px;
+    margin: 10px 0px 0px 5px;
+}
+
+.div6 {
+    width: 30px;
+    height: 30px;
+    background: #e9f1fe;
+    border-radius: 5px;
+    margin: 10px 0px 0px 5px;
+}
+
+.div6 {
+    width: 30px;
+    height: 30px;
+    background: #e9f1fe;
+}
+
+.div7 {
+    background: #ffffff;
+    border: 5px solid #fafaff;
+    border-radius: 10px;
+    margin: 0px 35px 0px 10px;
+}
+
+.div7:hover {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+.div8 {
+    width: 35px;
+    height: 35px;
+    background: #e9f1fe;
+    border-radius: 5px;
+    margin: 15px 0px 0px 15px;
+}
+
+.div9 {
+    width: 35px;
+    height: 35px;
+    background: #e9f1fe;
+    border-radius: 5px;
+    margin: 5px 0px 10px 10px;
+}
+
+.div10 {
+    height: 150px;
+    background: #ffffff;
+    border: 5px solid #fafaff;
+    border-radius: 10px;
+    margin: 0px 35px 0px 10px;
+}
+
+.div10:hover {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+.div11 {
+    background: #e9f1fe;
+    padding-bottom: 5%;
+}
+
+.p-1 {
+    padding: 15% 30% 0% 12%;
+    color: #1f3e72;
+    font-size: 52px;
+    font-weight: bold;
+}
+
+.p-2 {
+    padding: 5% 32% 5% 12%;
+    color: #6d7b93;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.p-3 {
+    color: #1f3e72;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.p-4 {
+    color: #1f3e72;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.p-5 {
+    color: #1f3e72;
+    font-size: 19px;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.p-6 {
+    padding: 5% 0% 0% 12%;
+    color: #1f3e72;
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.p-7 {
+    padding: 2% 52% 5% 12%;
+    color: #6d7b93;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.p-8 {
+    padding: 5% 30% 0% 15%;
+    color: #1f3e72;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.p-9 {
+    padding: 5% 22% 0% 15%;
+    color: #6d7b93;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.p-10 {
+    padding: 5% 40% 0% 15%;
+    color: #1f3e72;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.p-11 {
+    padding: 10% 0% 0% 15%;
+    color: #1f3e72;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.p-12 {
+    padding: 5% 15% 5% 15%;
+    color: #6d7b93;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.p-13 {
+    color: #1f3e72;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0px 0px 10px;
+}
+
+.p-14 {
+    color: #6d7b93;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0px 0px 10px;
+}
+
+.p-15 {
+    padding: 0% 0% 0% 15%;
+    color: #1f3e72;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.p-16 {
+    padding: 0% 0% 0% 25%;
+    color: #1f3e72;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.p-17 {
+    color: #6d7b93;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 0% 0% 0% 25%;
+}
+
+.p-18 {
+    color: #6d7b93;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 5% 24% 10% 1%;
+}
+
+.p-19 {
+    padding: 20% 0% 0% 25%;
+    color: #1f3e72;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.p-20 {
+    color: #6d7b93;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 10% 0% 0% 25%;
+}
