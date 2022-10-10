@@ -59,13 +59,13 @@ function reply_click(clicked_id)
   {
   switch(clicked_id){
     case '1':
-      window.open("https://fami-pasteleria.000webhostapp.com/Pasteleria.html", "_blank");
+      window.open("Pasteleria.html", "_blank");
     break;
     case '2':
-      window.open("https://fami-pasteleria.000webhostapp.com/vacunacion.html", "_blank");
+      window.open("vacunacion.html", "_blank");
     break;
     case '3':
-      window.open("http://fami-pasteleria.000webhostapp.com/pokedex.html", "_blank");
+      window.open("pokedex.html", "_blank");
     break;
     default:
       alert("La direccion buscada no esta disponible")
