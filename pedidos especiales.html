@@ -1,0 +1,277 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="icon" href="imagenes/logo pasteleria.svg">
+    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+    <title>Pasteleria Fami</title>
+</head>
+
+<body class="bg-famibody">
+
+    <div class="row bg-fami">
+        <!--Menu de navegacion-->
+        <div class="col-12">
+            <a class="navbar-brand" href="index.html">
+                <img class="my-2 ms-2" src="imagenes/logo pasteleria.svg" alt="Logo de Pasteleria Fami" width="60" height="54">
+            </a>
+            <div class="lifami nav-link ps-3 pt-3 my-2"><a href="#">Iniciar sesion</a></div>
+            <div class="lifami nav-link ps-3 pt-3 my-2">
+                <a class="dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Pasteles
+                </a>
+                <ul class="dropdown-menu border-0 bg-fami border-1" aria-labelledby="navbarDropdown">
+                    <li class="bg-fami" style="width: 300px;">
+                        <li><a class="dropdown-item bg-fami" href="catalogo.html">Catalogo</a></li>
+                        <li><a class="dropdown-item bg-fami" href="pedidos especiales.html">Pedidos especiales</a></li>
+                    </li>
+                </ul>
+            </div>
+            <div class="lifami nav-link ps-3 pt-3 my-2"><a href="index.html">Inicio</a></div>
+        </div>
+    </div>
+    <!--Fin del menu de navegacion-->
+    <div class="row bg-famibody">
+        <div class="col-12 text-center">
+            <img src="imagenes/fami.svg" alt="Fami logo" width="130" height="68">
+            <p class="pfami">Fami es de familia</p>
+            <h1>Pedidos especiales: Catalogo</h1>
+        </div>
+    </div>
+    <!--Inicio de seleccion del pastel-->
+    <div class="row bg-famibody px-5 py-3">
+        <div class="col-1"></div>
+        <div class="col-10">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="imagenes/pastel de chocolate.jpg" class="d-block w-100" style="max-height: 500px;" alt="Pastel de chocolate">
+                        <div class="carousel-caption d-md-block">
+                            <h2 style="color: rgb(148, 126, 0);">Pastel de chocolate</h2>
+                            <h3 style="color: rgb(148, 126, 0);">250$</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="imagenes/pastel de fresas.jpg" class="d-block w-100" style="max-height: 500px;" alt="Pastel de fresas">
+                        <div class="carousel-caption d-md-block">
+                            <h2 style="color: rgb(148, 126, 0);">Pastel de fresas</h2>
+                            <h3 style="color: rgb(148, 126, 0);">360$.</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="imagenes/pastel de frutas.jpg" class="d-block w-100" style="max-height: 500px;" alt="Pastel de frutas">
+                        <div class="carousel-caption d-md-block">
+                            <h2 style="color: rgb(148, 126, 0);">Pastel de frutas</h2>
+                            <h3 style="color: rgb(148, 126, 0);">350$</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="imagenes/pastel de vainilla.jpg" class="d-block w-100" style="max-height: 500px;" alt="Pastel de vainilla">
+                        <div class="carousel-caption d-md-block">
+                            <h2 style="color: rgb(148, 126, 0);">Pastel de vainilla</h2>
+                            <h3 style="color: rgb(148, 126, 0);">260$</h3>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+                </div>
+            </div>
+            <div class="col-1"></div>
+        </div>
+        <!--Fin del carousel de numeros de sabores-->
+        <div class="row">
+            <div class="container" ng-app="app">
+                <div class="row" ng-controller="ctrl">
+                    <div class="col-md-12">
+                        <div class="form-group col-md-6 py-4">
+                            <label class="control-label">Seleccione el numero de sabores</label>
+                            <select class="form-control" ng-model="selectOption" ng-options="o.value as o.name for o in opciones"></select>
+                        </div>
+
+                        <div class="form-group col-md-6" ng-if="selectOption == 1" ng-cloak>
+                            <label class="control-label pe-3">Sabor</label>
+                            <select class="rounded-3" name="select">
+          <option value="value1">chocolate</option>
+          <option value="value2" selected>Vainilla</option>
+          <option value="value3">fresa</option>
+                  <option value="value4">frutas</option>
+        </select>
+                        </div>
+                        <div class="form-group col-md-6" ng-if="selectOption == 2" ng-cloak>
+                            <label class="control-label pe-3">Sabor 1</label>
+                            <select class="rounded-3" name="select1">
+          <option value="value1">chocolate</option>
+          <option value="value2" selected>Vainilla</option>
+          <option value="value3">fresa</option>
+                  <option value="value4">frutas</option>
+        </select>
+                            <label class="control-label px-3">Sabor 2</label>
+                            <select class="rounded-3" name="select2">
+          <option value="value1">chocolate</option>
+          <option value="value2" selected>Vainilla</option>
+          <option value="value3">fresa</option>
+                  <option value="value4">frutas</option>
+        </select>
+                        </div>
+                        <div class="form-group col-md-6" ng-if="selectOption == 3" ng-cloak>
+                            <label class="control-label pe-3">Sabor 1</label>
+                            <select class="rounded-3" name="select1">
+          <option value="value1">chocolate</option>
+          <option value="value2" selected>Vainilla</option>
+          <option value="value3">fresa</option>
+                  <option value="value4">frutas</option>
+        </select>
+                            <label class="control-label px-3">Sabor 2</label>
+                            <select class="rounded-3" name="select2">
+          <option value="value1">chocolate</option>
+          <option value="value2" selected>Vainilla</option>
+          <option value="value3">fresa</option>
+                  <option value="value4">frutas</option>
+        </select>
+                            <label class="control-label px-3">Sabor 3</label>
+                            <select class="rounded-3" name="select3">
+          <option value="value1">chocolate</option>
+          <option value="value2" selected>Vainilla</option>
+          <option value="value3">fresa</option>
+                  <option value="value4">frutas</option>
+        </select>
+                        </div>
+                        <div class="form-group col-md-6" ng-if="selectOption == 4" ng-cloak>
+                            <label class="control-label border border-1 border-white rounded-3 bg-famibodyimg">Ha seleccionado un pastel de 4 sabores, por lo que el pastel sera de los 4 sabores que ofrecemos</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Inicio de seleccion del adornos-->
+    <div class="row bg-famibody px-5 py-3">
+        <div class="col-1"></div>
+        <div class="col-10">
+            <div id="carouselExampleCaptions2" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="1" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="2" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="3" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="4" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="imagenes/adorno amor.jpg" class="d-block w-100" style="max-height: 500px;" alt="Adorno Romantico">
+                        <div class="carousel-caption d-md-block">
+                            <h2 style="color: rgb(148, 126, 0);">Adorno Romanticos</h2>
+                            <h3 style="color: rgb(148, 126, 0);">40$</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="imagenes/adorno cumpleaños.jpg" class="d-block w-100" style="max-height: 500px;" alt="Adorno de cumpleaños">
+                        <div class="carousel-caption d-md-block">
+                            <h2 style="color: rgb(148, 126, 0);">Adornos de cumpleaños</h2>
+                            <h3 style="color: rgb(148, 126, 0);">65$.</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="imagenes/para niños.jpg" class="d-block w-100" style="max-height: 500px;" alt="Adorno para niños">
+                        <div class="carousel-caption d-md-block">
+                            <h2 style="color: rgb(148, 126, 0);">Adornos para niños</h2>
+                            <h3 style="color: rgb(148, 126, 0);">120$</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="imagenes/baby shower.jpg" class="d-block w-100 rounded-3" style="max-height: 500px;" alt="Adorno para Baby Shower">
+                        <div class="carousel-caption d-md-block">
+                            <h2 style="color: rgb(148, 126, 0);">Adorno para Baby Shower</h2>
+                            <h3 style="color: rgb(148, 126, 0);">100$</h3>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+                </div>
+            </div>
+            <div class="col-1"></div>
+        </div>
+    </div>
+    <!--Fin del carousel de adornos-->
+    <div class="row py-4 bg-famibody">
+        <div class="col-1"></div>
+        <div class="col-10">
+            <select class="form-select">
+                <option value="1">Adorno Romantico</option>
+                <option value="2">Adorno para cumpleaños</option>
+                <option value="3">Adorno para niños</option>
+                <option value="4">Adorno para Baby Shower</option>
+              </select>
+        </div>
+        <div class="col-1"></div>
+    </div>
+    <div class="row pb-5 bg-famibody">
+        <div class="col-1"></div>
+        <div class="col-10 border border-1 border-white rounded-3 bg-famibodyimg pb-5">
+            <h1 class="text-center">Datos de contacto</h1>
+            <hr>
+            <p>Escriba su nombre completo</p>
+            <input class="form-control" type="text">
+            <p>Escriba su numero telefonico</p>
+            <input class="form-control" type="number" name="Telefono">
+            <p>Escriba su correo electronico</p>
+            <input class="form-control" type="email" name="Correo">
+        </div>
+        <div class="col-1"></div>
+    </div>
+    <!--Pie de pagina-->
+    <div class="row bg-fami">
+        <div class="col-4">
+        </div>
+        <div class="col-1">
+            <a href="https://www.facebook.com" target="_blank">
+                <img class="img-centro border border-1 border-white rounded-circle" src="imagenes/facebook.png" alt="Logotipo de facebook" width="40" height="40">
+            </a>
+        </div>
+        <div class="col-2">
+            <a href="https://www.instagram.com" target="_blank">
+                <img class="img-centro border border-1 border-white rounded-3" src="imagenes/instagram.png" alt="Logotipo de facebook" width="40" height="40">
+            </a>
+        </div>
+        <div class="col-1">
+            <a href="https://www.twitter.com" target="_blank">
+                <img class="img-centro border border-1 border-white rounded-circle" src="imagenes/twitter.png" alt="Logotipo de facebook" width="40" height="40">
+            </a>
+        </div>
+        <div class="col-4">
+        </div>
+    </div>
+    <div class="row bg-fami">
+        <div class="col-8"></div>
+        <div class="col-4">
+            <h1>Datos de contacto</h1>
+            <p>Correo electronico: example.gmail.com</p>
+            <p>Telefono fijo: XX-XX-XX-XX-XX</p>
+            <p>Telefono celular: XX-XX-XX-XX-XX</p>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js"></script>
+<script src="js/sabores.js"></script>
+
+</html>
